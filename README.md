@@ -7,6 +7,9 @@
 - Turing Machine
   
 Descrierea fiecărui tip de automat se găsește, sub forma unui comentariu, la începutul fiecărui fișier .py.
+
+Codul este scris în Python, însoțit de comentarii succinte care fac înțelegerea codului mai ușoară. 
+Am încercat implmentarea cât mai modulară a proiectelor: cod structurat în funcții care, în funcție de context și automat, au fost reinterpretate.
 ## Asta ce face?
 ok
 - ok
