@@ -138,6 +138,8 @@ Fișiere cu extensia .pda
 Fișiere cu extensia .tm
 
     //Comentariile pot fi atat inline cat si pe linii separate, dar neaparat precedate de '//'
+
+    
     //Band reprezinta banda pe care lucram.
     [Band]
     inputString
