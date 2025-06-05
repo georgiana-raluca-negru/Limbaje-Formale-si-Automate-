@@ -10,6 +10,8 @@ Descrierea fiecărui tip de automat se găsește, sub forma unui comentariu, la 
 
 Codul este scris în Python, însoțit de comentarii succinte care fac înțelegerea codului mai ușoară. 
 Am încercat implmentarea cât mai modulară a proiectelor: cod structurat în funcții care, în funcție de context și automat, au fost reinterpretate.
+
+Pentru a rula fișierele, este necesar ca Python să fie instalat; în cazul în care nu există, îi puteți da download de aici: [python.org](https://www.python.org/downloads/).
 ## Asta ce face?
 ok
 - ok
