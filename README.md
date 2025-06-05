@@ -30,12 +30,6 @@ COMMENTS:
 Comments are represented either inline or on separate lines,
 but must be preceded by '//'
 
-STATES SECTION:
----------------
-Final states are marked with **, initial states with *****
-Note that a state can be both initial and final simultaneously
-(written as 'q, *****, **')
-
     [States]
     state1, * , **                 //Initial state (*)
     state2, **                     //Final state (**)
@@ -44,18 +38,12 @@ Note that a state can be both initial and final simultaneously
     stateN, **
     END
 
-SYMBOLS SECTION:
-----------------
     [Symbols]
     symbol1
     symbol2
     ----------
     symbolN
     END
-
-RULES SECTION:
---------------
-Rules are written in the format: current_state, symbol, destination_state
 
     [Rules]
     current_state1, symbol, dest_state1
