@@ -5,6 +5,7 @@
 - NFA (Non-Deterministic Formal Automata)
 - PDA (Push-Down Automata)
 - Turing Machine
+  
 Descrierea fiecărui tip de automat se găsește, sub forma unui comentariu, la începutul fiecărui fișier .py.
 ## Asta ce face?
 ok
