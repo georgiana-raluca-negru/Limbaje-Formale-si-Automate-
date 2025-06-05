@@ -18,7 +18,7 @@ După ce vă asigurați că aveți Python instalat pe dispozitiv, deschideți un
 ## Structura fișierelor și a comentariilor
 
 Fișiere cu extensia .dfa
-===================================
+
     //Comentariile pot fi atat inline cat si pe linii separate, dar neaparat precedate de '//'
 
     
