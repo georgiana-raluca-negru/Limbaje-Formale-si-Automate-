@@ -33,6 +33,7 @@ Fișiere cu extensia .dfa
     stateN, **
     END
 
+
     //Simboluri
     [Symbols]
     symbol1
@@ -50,4 +51,127 @@ Fișiere cu extensia .dfa
     ----------
     END
 
+Fișiere cu extensia .nfa
 
+    //Comentariile pot fi atat inline cat si pe linii separate, dar neaparat precedate de '//'
+
+    
+    //Starile
+    //Starea finala este marcata cu **, iar starea initiala cu *
+    //De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
+    [States]
+    state1, * , **                 //Stare initiala (*), dar si finala (**)
+    state2, **                     //Stare finala (**)
+    state3
+    ----------
+    stateN, **
+    END
+
+    
+    //Simboluri
+    [Symbols]
+    symbol1
+    symbol2
+    ----------
+    symbolN
+    epsilon                        //Il introducem manual drept cuvant nul
+    END 
+
+    
+    //Reguli
+    //Sunt scrise sub forma: stare_curenta, simbol, stare_destinatie
+    //Daca simboluul este epsilon, atunci nu avem nevoie de input pentru a-l consuma: vom trece automat in starea destinatie
+    [Rules]
+    current_state1, symbol, dest_state1
+    current_state2, symbol, dest_state2
+    ----------
+    END
+
+Fișiere cu extensia .pdaa
+
+    //Comentariile pot fi atat inline cat si pe linii separate, dar neaparat precedate de '//'
+
+    
+    //Starile
+    //Starea finala este marcata cu **, iar starea initiala cu *
+    //De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
+    [States]
+    state1, * , **                 //Stare initiala (*), dar si finala (**)
+    state2, **                     //Stare finala (**)
+    state3
+    ----------
+    stateN, **
+    END
+
+    
+    //Simbolurile alfabetului de input
+    [InputSymbols]
+    inputSymbol1
+    inputSymbol2
+    ----------
+    inoutSymbolN
+    END 
+
+
+    //Simbolurile alfabetului de stiva
+    [StackSymbols]
+    Z                             //Simbolul de la baza stivei, neaparat adaugat
+    stackSymbol1
+    stackSymbol2
+    ----------
+    stackSymbolN
+    END 
+
+    
+    //Reguli
+    //Sunt de forma: stare_curenta, simbol, top_stiva (ii dam totodata si pop de pe stiva) -> stare_destinatie, push_stiva (daca sunt mai mult de 2 simboluri, se va face push de la dreapta la stanga)
+    //Daca in locul lui push_stiva avem simbolul 'epsilon', atunci nu vom da push oe stiva la nimic
+    //Daca in locul lui top_stiva avem simboulul 'epsilon', atunci nu vom da pop de pe stiva 
+    [Rules]
+    current_state1, inputSimbol, stackSymbol -> dest_state1, stackSymbol             //Eventual compus
+    current_state2, inputSimbol, stackSymbol -> dest_state2, stackSymbol
+    ----------
+    END
+
+
+Fișiere cu extensia .tm
+
+    //Comentariile pot fi atat inline cat si pe linii separate, dar neaparat precedate de '//'
+    //Band reprezinta banda pe care lucram.
+    [Band]
+    inputString
+    END
+
+    
+    //Starile
+    //Starea finala este marcata cu **, iar starea initiala cu *
+    //De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
+    [States]
+    state1, * , **                 //Stare initiala (*), dar si finala (**)
+    state2, **                     //Stare finala (**)
+    state3
+    ----------
+    stateN, **
+    END
+
+    
+    //Simboluri
+    [Symbols]
+    symbol1
+    symbol2
+    ----------
+    symbolN
+    END 
+
+    
+    //Reguli
+    //Sunt scrise sub forma: stare_curenta, simbol -> stare_destinatie, simbol_nou, directie (neaparat L sau R)
+    [Rules]
+    current_state1, symbol -> dest_state, new_symbol, L/R
+    current_state2, symbol -> dest_state, new_symbol, L/R
+    ----------
+    END
+    
+
+
+    
