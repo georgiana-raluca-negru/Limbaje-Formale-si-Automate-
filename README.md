@@ -17,38 +17,54 @@ După ce vă asigurați că aveți Python instalat pe dispozitiv, deschideți un
 
 ## Structura fișierelor și a comentariilor
 Fișiere cu extensia .dfa
-```python
-//Comentariile sunt reprezentate fie inline, fie pe linii separate, dar neaparat precedate de '//'
+FINITE AUTOMATON DEFINITION FORMAT
+===================================
 
-//Starile
-//Starea finala este marcata cu **, iar starea initiala cu *
-//De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
-[States]
-state1, * , **                 //Stare initiala (*)
-state2, **                     //Stare finala (**)
-state3
-----------
-stateN, **
-END
+File Structure:
+---------------
+This format defines a finite automaton using three main sections:
+States, Symbols, and Rules.
 
+COMMENTS:
+---------
+Comments are represented either inline or on separate lines,
+but must be preceded by '//'
 
-//Simboluri
-[Symbols]
-symbol1
-symbol2
-----------
-symbolN
-END
+STATES SECTION:
+---------------
+Final states are marked with **, initial states with *****
+Note that a state can be both initial and final simultaneously
+(written as 'q, *****, **')
 
+    [States]
+    state1, * , **                 //Initial state (*)
+    state2, **                     //Final state (**)
+    state3
+    ----------
+    stateN, **
+    END
 
-//Reguli
-//Sunt scrise sub forma: stare_curenta, simbol, stare_destinatie
-[Rules]
-current_state1, symbol, dest_state1
-current_state2, symbol, dest_state2
-----------
-END
+SYMBOLS SECTION:
+----------------
+    [Symbols]
+    symbol1
+    symbol2
+    ----------
+    symbolN
+    END
 
+RULES SECTION:
+--------------
+Rules are written in the format: current_state, symbol, destination_state
 
-```
+    [Rules]
+    current_state1, symbol, dest_state1
+    current_state2, symbol, dest_state2
+    ----------
+    END
+
+EXAMPLE USAGE:
+--------------
+Save this format in a .txt file and follow the structure above
+to define your finite automaton.
 
