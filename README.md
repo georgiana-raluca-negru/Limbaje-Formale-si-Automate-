@@ -18,23 +18,31 @@ După ce vă asigurați că aveți Python instalat pe dispozitiv, deschideți un
 ## Structura fișierelor și a comentariilor
 Fișiere cu extensia .dfa
 ===================================
+    //Comentariile pot fi atat inline cat si pe linii separate, dar neaparat precedate de '//'
 
-
+    
+    //Starile
+    //Starea finala este marcata cu **, iar starea initiala cu *
+    //De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
     [States]
-    state1, * , **                 //Initial state (*)
-    state2, **                     //Final state (**)
+    state1, * , **                 //Stare initiala (*), dar si finala (**)
+    state2, **                     //Stare finala (**)
     state3
     ----------
     stateN, **
     END
 
+    //Simboluri
     [Symbols]
     symbol1
     symbol2
     ----------
     symbolN
-    END
+    END 
 
+    
+    //Reguli
+    //Sunt scrise sub forma: stare_curenta, simbol, stare_destinatie
     [Rules]
     current_state1, symbol, dest_state1
     current_state2, symbol, dest_state2
