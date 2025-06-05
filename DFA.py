@@ -1,3 +1,10 @@
+#Un DFA este definit ca fiind un 5-tuple (Σ, Q, δ, q0, F) unde:
+#    - Σ este alfabetul automatului (lista de simboluri) -> symbols 
+#    - Q este multimea de stari ale automatului (lista de stari) -> states
+#    - δ : Q x (Σ) -> P(Q)  a automatului (lista de tranzitii) -> rules
+#    - q0 este starea inițiala a automatului -> start_state
+#    - F este multimea de stari de acceptare ale automatului (lista de stari de acceptare) -> final_states
+
 def parse_file(fisier):
     symbols = []
     rules = {}
