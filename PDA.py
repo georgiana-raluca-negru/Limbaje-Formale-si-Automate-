@@ -1,3 +1,13 @@
+#Un PDA este definit ca fiind un 7-tuplu (Σ, Γ, Q, δ, q0, F, Z0) unde:
+#   - Σ este alfabetul de intrare al automatului (lista de simboluri) -> input_symbols
+#   - Γ este alfabetul de stiva al automatului(lista de simboluri) -> stack_symbols
+#   - Q este multimea de stari ale automatului (lista de stari) -> states
+#   - δ : Q x (Σ U {ε}) x (Γ U {ε}) -> P(Q x Γ)* este functia de tranzitie a automatului (lista de tranzitii) -> rules
+#   - q0 este starea inițiala a automatului (start_state) -> start_state
+#   - F este multimea de stari de acceptare ale automatului (lista de stari de acceptare) -> final_states
+#   - Z0 este simbolul de start al stivei (start_symbol) -> in caazul de fata, acesta este Z pentru usurinta lucrului
+
+
 def parse_file(fisier):
     input_symbols = []
     stack_symbols = []
