@@ -17,18 +17,8 @@ După ce vă asigurați că aveți Python instalat pe dispozitiv, deschideți un
 
 ## Structura fișierelor și a comentariilor
 Fișiere cu extensia .dfa
-FINITE AUTOMATON DEFINITION FORMAT
 ===================================
 
-File Structure:
----------------
-This format defines a finite automaton using three main sections:
-States, Symbols, and Rules.
-
-COMMENTS:
----------
-Comments are represented either inline or on separate lines,
-but must be preceded by '//'
 
     [States]
     state1, * , **                 //Initial state (*)
@@ -51,8 +41,4 @@ but must be preceded by '//'
     ----------
     END
 
-EXAMPLE USAGE:
---------------
-Save this format in a .txt file and follow the structure above
-to define your finite automaton.
 
