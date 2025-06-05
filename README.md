@@ -6,12 +6,15 @@
 - PDA (Push-Down Automata)
 - Turing Machine
   
-Descrierea fiecărui tip de automat se găsește, sub forma unui comentariu, la începutul fiecărui fișier .py.
+Descrierea fiecărui tip de automat se găsește, sub forma unui comentariu, la începutul fiecărui fișier .py. În repository se găsesc atât fișierele .py corespunzătoare fiecărei teme de laborator cât și fișiere text din care am preluat datele. Fișierele text corespunzatoare automatelor au extensia dată de numele automatului (exemplu, am folosit fișierul text input.pda pentru a-mi prelua datele necesare PDA-ului).
 
 Codul este scris în Python, însoțit de comentarii succinte care fac înțelegerea codului mai ușoară. 
 Am încercat implmentarea cât mai modulară a proiectelor: cod structurat în funcții care, în funcție de context și automat, au fost reinterpretate.
 
-Pentru a rula fișierele, este necesar ca Python să fie instalat; în cazul în care nu există, îi puteți da download de aici: [python.org](https://www.python.org/downloads/).
+Pentru a rula fișierele, este necesar ca Python să fie instalat; în cazul în care nu îl aveți deja, îi puteți da download de aici: [python.org](https://www.python.org/downloads/).
+După ce vă asigurați că aveți Python instalat pe dispozitiv, deschideți un IDE și rulați unul dintre fișiere.
+
+
 ## Asta ce face?
 ok
 - ok
