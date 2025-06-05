@@ -15,7 +15,40 @@ Pentru a rula fișierele, este necesar ca Python să fie instalat; în cazul în
 După ce vă asigurați că aveți Python instalat pe dispozitiv, deschideți un IDE și rulați unul dintre fișiere.
 
 
-## Asta ce face?
-ok
-- ok
+## Structura fișierelor și a comentariilor
+Fișiere cu extensia .dfa
+```python
+//Comentariile sunt reprezentate fie inline, fie pe linii separate, dar neaparat precedate de '//'
+
+//Starile
+//Starea finala este marcata cu **, iar starea initiala cu *
+//De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
+[States]
+state1, * , **                 //Stare initiala (*)
+state2, **                     //Stare finala (**)
+state3
+----------
+stateN, **
+END
+
+
+//Simboluri
+[Symbols]
+symbol1
+symbol2
+----------
+symbolN
+END
+
+
+//Reguli
+//Sunt scrise sub forma: stare_curenta, simbol, stare_destinatie
+[Rules]
+current_state1, symbol, dest_state1
+current_state2, symbol, dest_state2
+----------
+END
+
+
+```
 
