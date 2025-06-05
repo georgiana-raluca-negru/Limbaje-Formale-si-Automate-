@@ -87,7 +87,7 @@ Fișiere cu extensia .nfa
     ----------
     END
 
-Fișiere cu extensia .pdaa
+Fișiere cu extensia .pda
 
     //Comentariile pot fi atat inline cat si pe linii separate, dar neaparat precedate de '//'
 
@@ -124,7 +124,8 @@ Fișiere cu extensia .pdaa
 
     
     //Reguli
-    //Sunt de forma: stare_curenta, simbol, top_stiva (ii dam totodata si pop de pe stiva) -> stare_destinatie, push_stiva (daca sunt mai mult de 2 simboluri, se va face push de la dreapta la stanga)
+    //Sunt de forma: stare_curenta, simbol, top_stiva (ii dam totodata si pop de pe stiva) -> stare_destinatie, push_stiva 
+    //(daca sunt mai mult de 2 simboluri, se va face push de la dreapta la stanga)
     //Daca in locul lui push_stiva avem simbolul 'epsilon', atunci nu vom da push oe stiva la nimic
     //Daca in locul lui top_stiva avem simboulul 'epsilon', atunci nu vom da pop de pe stiva 
     [Rules]
