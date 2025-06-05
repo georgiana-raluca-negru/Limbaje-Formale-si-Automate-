@@ -1,0 +1,30 @@
+//DFA care accepta sirurile valide de lungime impara
+//Exemple de input-uri acceptate: 1, 0, 111, 101, 000
+//Exemple de input-uri respinse: 00, 11, 10, 1010
+
+
+//Starile
+//Starea finala este marcata cu **, iar starea initiala cu *
+//De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
+[States]
+q0, *                   //Stare initiala (*)
+q1, **                  //Stare finala (**)
+END
+
+
+//Simboluri
+[Symbols]
+0
+1
+END
+
+
+//Reguli
+//Sunt scrise sub forma: stare_curenta, simbol, stare_destinatie
+[Rules]
+q0, 0, q1              //Daca suntem in q0 si primim 0, mergem in q1
+q0, 1, q1              //Daca suntem in q0 si primim 1, mergem in q1
+q1, 0, q0              //Daca suntem in q1 si primim 0, ne intoarcem in q0
+q1, 1, q0              //Daca suntem in q1 si primim 1, ne intoarcem in q0
+END
+

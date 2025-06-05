@@ -1,0 +1,39 @@
+//PDA care accepta expresiile corect parantezate
+//Exemple de input-uri acceptate: (), ()(), (()), ((()())) 
+//Exemple de input-uri respinse: (, ((((, ())
+
+
+//Starile
+//Starea finala este marcata cu **, iar starea initiala cu *
+//De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
+[States]
+q0, *  
+q1, **
+END
+
+
+//Simbolurile alfabetului de input
+[InputSymbols]
+(
+)
+END
+
+
+//Simbolurile alfabetului de stiva
+[StackSymbols]
+Z                                            //Simbolul de la baza stivei  
+X                                            //Simbol adaugat pentru a marca o paranteza deschisa
+END
+
+
+//Reguli
+//Sunt de forma: stare_curenta, simbol, top_stiva (ii dam totodata si pop de pe stiva) -> stare_destinatie, push_stiva (daca sunt mai mult de 2 simboluri, se va face push de la dreapta la stanga)
+//Daca in locul lui push_stiva avem simbolul 'epsilon', atunci nu vom da push oe stiva la nimic
+//Daca in locul lui top_stiva avem simboulul 'epsilon', atunci nu vom da pop de pe stiva 
+[Rules]
+q0, (, Z -> q0, XZ                           //Prima paranteza aduagata: push X si pastram simbolul de baza
+q0, (, X -> q0, XX                           //Paranteza normala: dam push X
+q0, ), X -> q0, epsilon                      //Paranteza inchisa: dam pop la X si nu dam push la nimic
+q0, epsilon, Z -> q1, epsilon                //Cu epsilon facem tranzitie catre starea finala: nu dam push si nu dam pop la nimic
+END
+

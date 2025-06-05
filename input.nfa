@@ -1,0 +1,32 @@
+//NFA care accepta toate sirurile care au cel putin un 'b'
+
+
+//Starile
+//Starea finala este marcata cu **, iar starea initiala cu *
+//De precizat ca o stare poate fi, concomitent, initiala si finala (este scrisa sub forma 'q, *, **')
+[States]
+q0, *                       //Stare intiala (*)
+q1
+q2, **                      //Stare finala (**)
+END
+
+
+//Simboluri
+[Symbols]
+a
+b
+epsilon                    //Introducem simbolul epsilon care este folosit drept cuvant nul
+END
+
+
+//Reguli
+//Sunt de forma: stare_curenta, simbol, stare_destinatie
+//Daca simboluul este epsilon, atunci nu avem nevoie de input pentru a-l consuma: vom trece automat in starea destinatie
+[Rules]
+q0, a, q1
+q0, epsilon, q1
+q1, b, q2
+q1, epsilon, q0
+q1, a, q1
+q2, b, q2
+END
